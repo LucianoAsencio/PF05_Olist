@@ -1,1 +1,1 @@
-Este proyecto se trata de Olist
+Este proyecto se trata de Olist parte analityc
