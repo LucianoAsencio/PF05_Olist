@@ -10,16 +10,16 @@
 
 
 ## **TABLA DE CONTENIDO**  
-+ 1-Introducción.  
-+ 2-Objetivos de trabajo.  
-+ 3-Principales tecnologías utilizadas.  
-+ 4-Informes.  
++ [1- Introducción.](#introducción) 
++ [2- Objetivos de trabajo.](#objetivos-de-trabajo)
++ [3- Principales tecnologías utilizadas.](#principales-tecnologías-utilizadas)
++ [4- Informes.](#informes)
  
  
 <hr>
 
 # *Introducción*
-Nuestro equipo está compuesto por expertos en tecnología, marketing y negocios.  
+Somos AllemBI Y nuestro equipo está compuesto por expertos en tecnología, marketing y negocios.  
 
 En primer lugar, Luciano Asencio es nuestro Scrum master y Data engineer, con amplia experiencia en la gestión de proyectos y en el manejo de datos. Alit Fasce es nuestro Data engineer, con habilidades avanzadas en la recolección y procesamiento de datos.  
 Lucas Maximiliano Garcia Seidl y Leonardo Rodriguez son nuestros Data Analysts, con habilidades en análisis de datos y estrategias de marketing.  
