@@ -55,7 +55,7 @@ Se pasan las siguientes columnas a formato fecha hora:
 
 import pandas as pd
 import secrets
-from funciones import *
+from funciones_ETL import *
 
 # Abrimos los datasets en dataframe de pandas 1 por tabla
 
@@ -178,6 +178,9 @@ replazar_datos('cariacica / es', 'cariacica')
 replazar_datos('jacarei / sao paulo', 'jacarei')
 replazar_datos("sao miguel do oeste", "sao miguel d'oeste")
 replazar_datos('santo andre/sao paulo', 'santo andre')
+replazar_datos('04482255', 'rio de janeiro')
+replazar_datos('vendas@creditparts.com.br', 'maringa')
+
 
 
 #Con respecto a las tablas 8_sellers 9_products y 10_category_name No se realizaron cambios
