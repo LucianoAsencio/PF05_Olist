@@ -20,3 +20,6 @@ def eliminar_columnas(df, lista_columna):
 #funcion para exportar archivos
 def exportar_csv(df, url_destino):  
     df.to_csv(url_destino, index=False)
+
+def replazar_datos(lista_o_dato_original, nuevo_dato): 
+    df10_sellers['seller_city'].replace(lista_o_dato_original,nuevo_dato,inplace=True)

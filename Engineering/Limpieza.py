@@ -1,81 +1,51 @@
 ## ETL
 '''
 Como conclusión del EDA, las modificaciones a realizar para obtener datos limpios para el Data Warehouse son: 
-
 ### 1_closed_deals:
-
  - 'won_date' _ cambio de formato a fecha hora
-
  Se eliminan las columnas por falta de datos suficientes (NaN o 0): 
-
  - 'has_gtin' 
  - 'has_company' 
  - 'average_stock' 
  - 'declared_product_catalog_size'
  - 'declared_monthly_revenue'
-
 Se crea un nuevo id en una nueva columna que se coloca al inicio de la tabla.
-
  - 'closed_deals_id'
-
 ### 2_customers: 
-
 Se elimina la columna de customer_unique_id porque no es un id único:
-
  -  'customer_unique_id'
-
 ### 3_geolocation:
-
 Es una table incompleta a pesar de su dimensión ya que no tiene todos
 los zip_code (códigos postales) presentes en las tablas de Customers 
 y Sellers por lo tanto será eliminada del modelo.
 Se evaluará hacer una nueva tabla de geolocation sin latitud
 ni longitud, según su posible utilidad. 
-
 ### 4_marketing_q_leads:
-
 Se pasan la siguiente columna a formato fecha hora:
-
  - 'first_contact_date'
-
 ### 5_order_items:
-
 Se pasan la siguiente columna a formato fecha hora:
-
  - 'shipping_limit_date'
  
 ### 6_order_payments:
-
 Se cambia de formato a entero: 
-
  - 'payment_installments'
-
 ### 7_order_reviews:
-
 Se pasan las siguientes columnas a formato fecha hora:
  - 'review_creation_date'
  - 'review_answer_timestamp'
-
 ### 8_orders:
-
 Se pasan las siguientes columnas a formato fecha hora: 
-
  - 'order_purchase_timestamp'
  - 'order_approved_at'
  - 'order_delivered_carrier_date'
  - 'order_delivered_customer_date'
  - 'order_estimated_delivery_date'
-
 ### 9_products:
-
  -  sin modificaciones
-
 ### 10_sellers:
-
  - sin modificaciones
-
 ### 11_product_category_name_translation:
-
  - sin modificaciones
 '''
 
@@ -85,7 +55,7 @@ Se pasan las siguientes columnas a formato fecha hora:
 
 import pandas as pd
 import secrets
-from funciones_ETL import *
+from funciones import *
 
 # Abrimos los datasets en dataframe de pandas 1 por tabla
 
@@ -143,6 +113,7 @@ df1_closed_deals = df1_closed_deals.reindex(columns=['closed_deals_id','mql_id',
 
 # Se elimina la columna de customer_unique_id porque no es un id único
 df2_customers = df2_customers.drop(columns='customer_unique_id')
+df2_customers['customer_city']=df2_customers['customer_city'].replace("arraial d'ajuda","arraial d ajuda")
 
 
 # 3 _marketing_quality_leads:
@@ -178,6 +149,35 @@ columna_a_tipo_fecha_hora(df8_orders,'order_approved_at')
 columna_a_tipo_fecha_hora(df8_orders,'order_delivered_carrier_date')
 columna_a_tipo_fecha_hora(df8_orders,'order_delivered_customer_date')
 columna_a_tipo_fecha_hora(df8_orders,'order_estimated_delivery_date')
+
+# 8_sellers:
+# Normalización de datos columna city
+lista_1=['sao  paulo','sao paluo','sao paulo','sao paulo - sp', 'sao paulo / sao paulo', 'sao paulo sp', 'sao paulop','são paulo']
+lista_2=['rio de janeiro, rio de janeiro, brasil','rio de janeiro \rio de janeiro', 'rio de janeiro / rio de janeiro']
+lista_3=['riberao preto','ribeirao pretp', 'ribeirao preto / sao paulo']
+lista_4=["santa barbara d oeste","santa barbara d´oeste"]
+lista_5=['sao  jose dos pinhais','sao jose dos pinhas']
+lista_6=['mogi das cruses','mogi das cruzes / sp']
+
+replazar_datos(lista_1,'sao paulo')
+replazar_datos(lista_2,'rio de janeiro')
+replazar_datos(lista_3,'ribeirao preto')
+replazar_datos(lista_4, "santa barbara d'oeste")
+replazar_datos(lista_5, "sao jose dos pinhais")
+replazar_datos(lista_6, 'mogi das cruzes')
+
+replazar_datos('novo hamburgo, rio grande do sul, brasil', 'novo hamburgo')
+replazar_datos('pinhais/pr', 'pinhais')
+replazar_datos("arraial d'ajuda (porto seguro)", "arraial d'ajuda")
+replazar_datos('maua/sao paulo', 'maua')
+replazar_datos('lages - sc', 'lages')
+replazar_datos('sbc/sp', 'sbc')
+replazar_datos('sp / sp', 'sp')
+replazar_datos('carapicuiba / sao paulo', 'carapicuiba')
+replazar_datos('cariacica / es', 'cariacica')
+replazar_datos('jacarei / sao paulo', 'jacarei')
+replazar_datos("sao miguel do oeste", "sao miguel d'oeste")
+replazar_datos('santo andre/sao paulo', 'santo andre')
 
 
 #Con respecto a las tablas 8_sellers 9_products y 10_category_name No se realizaron cambios
