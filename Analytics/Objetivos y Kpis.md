@@ -5,23 +5,38 @@
 
 # KPI´S  
 
-1. *Número de pedidos por trimestre:*  
+1. *Indicador de desempeño en ventas comparativo (IDV)*  
+El objetivo es comparar el desempeño actual con el desempeño del año anterior y ver si se está alcanzando o no la meta establecida. Se utiliza para determinar si las estrategias de ventas están funcionando y para tomar decisiones para mejorar el rendimiento del negocio.  
+
+2. *Ticket medio*  
+ El ticket medio es un indicador económico que mide el valor promedio de las ventas por transacción. Se calcula dividiendo el total de ventas por el número de transacciones realizadas. Este indicador es útil para conocer el valor promedio de las compras de los clientes y para establecer estrategias de marketing y precios.  
+
+
+3. *Indicador de cumplimiento de órdenes (ICO)*   
+Se calcula comparando el número de órdenes actuales con el número de órdenes del año anterior y con la meta establecida. Este indicador es útil para medir la efectividad de las estrategias de marketing y de ventas, y para identificar tendencias y oportunidades de crecimiento.  
+
+4. *Indicador de eficiencia en el costo del flete (IECF)*  
+ Mide el rendimiento del negocio en términos de la eficiencia en el costo del flete. Se calcula dividiendo el costo total del flete en el periodo actual entre el número de envíos realizados y comparando con el año anterior. Este indicador es útil para medir el desempeño del negocio en términos de eficiencia en los costos y para identificar tendencias y oportunidades de mejora en la gestión de los costos de flete.  
+
+<hr>  
+
+6. *Número de pedidos por trimestre:*  
 Aumentar el número de pedidos por trimestre en un 5% comprado al mismo trimestre del año pasado.
 Para esto vamos a necesitar comparar trimestres. Comparando las ventas totales x trimestre y por año
 
-2. *Cantidad de clientes por región:*
+7. *Cantidad de clientes por región:*
  Aumentar la cantidad de clientes por región un 10% anualmente.
  Variación porcentual anual e interanual de cantidad total de clientes.
 
 
-3. *NPS (Net Promoter Score):* 
+8. *NPS (Net Promoter Score):* 
 Mide el nivel de lealtad y la probabilidad de que el cliente muestre tu marca a otros
 Porcentaje de promotores(4,5) – porcentaje detractores(3,2,1). Buscar un Nps mayor a 40.
 
-4. *Disminuir pedidos cancelados:*
+9. *Disminuir pedidos cancelados:*
 Disminuir la tasa de pedidos cancelados en un 10% anualmente
 Variación anual de pedidos cancelados.
 
-5. *Tiempo promedio para la entrega de un pedido:*  
+10. *Tiempo promedio para la entrega de un pedido:*  
 Reducir el tiempo promedio para la entrega de un pedido en un 7% en el próximo trimestre.
 Cuanto mayor sea tu tiempo de entrega, menores serán las posibilidades de ganar al cliente y cerrar la venta.
