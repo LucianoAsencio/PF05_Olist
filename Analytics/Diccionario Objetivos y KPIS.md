@@ -1,0 +1,9 @@
+
+
+
+| # | KPI | Descripción | Meta |Explicacion |   Cómo hacerlo
+| - | -------- | ----------- | :----------: | :------------------: |
+| 1 | Indicador de desempeño en ventas comparativo (IDV)  | Comparar el desempeño actual con el desempeño del año anterior y ver si se está alcanzando o no la meta establecida.  | Este KPI ayuda a determinar si las estrategias de ventas están funcionando y para tomar decisiones para mejorar el rendimiento del negocio.  | Calcular el total de ventas en el periodo actual y compararlo con las ventas del mismo periodo del año anterior y con la meta establecida. |
+| 2 | Ticket medio | Conocer el valor promedio de las compras de los clientes y para establecer estrategias de marketing y precios.  | Este indicador económico mide el valor promedio de las ventas por transacción.  | Calcular el ticket medio dividiendo el total de ventas por el número de transacciones realizadas. |
+| 3 | Indicador de cumplimiento de órdenes (ICO) | Comparar el número de órdenes actuales con el número de órdenes del año anterior y con la meta establecida.  | Este indicador es útil para medir la efectividad de las estrategias de marketing y de ventas, y para identificar tendencias y oportunidades de crecimiento.  | Calcular el indicador de cumplimiento de órdenes dividiendo el número de órdenes actuales entre el número de órdenes del año anterior y comparando con la meta establecida. |
+| 4 | Variación del costo del flete  | Este KPI mide la variación en el costo del flete entre el año actual y el año anterior| - | Calcular el costo del flete en el año actual y compararlo con el costo del flete en el año anterior| 
