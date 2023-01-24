@@ -1,7 +1,7 @@
 # <h1 align=center> 📊 **Diccionario de KPI´S:** 📈 </h1>
 
 
-# Performance Ventas:  
+## Performance Ventas:  
 El objetivo general para la empresa es mejorar el rendimiento del negocio mediante la evaluación y el seguimiento del éxito de las estrategias de ventas, marketing y costos utilizando los indicadores de desempeño en ventas comparativo (IDV), ticket medio, cumplimiento de órdenes (ICO) e eficiencia en el costo del flete (IECF) con metas específicas para cada indicador.  
 
 
@@ -15,7 +15,7 @@ El objetivo general para la empresa es mejorar el rendimiento del negocio median
 
 <hr>
 
-# Logistica:  
+## Logistica:  
 El objetivo común para la empresa en logística es mejorar la eficiencia del proceso logístico y cumplir con las expectativas de entrega del cliente mediante el seguimiento y la evaluación de los indicadores de tasa de cumplimiento de entregas a tiempo (TCET), tiempo promedio de envío (TPE) y envíos retrasados (ER) con metas específicas para cada indicador.    
 
 | # | KPI | Descripción | Meta |   Cómo hacerlo  |  
@@ -27,7 +27,7 @@ El objetivo común para la empresa en logística es mejorar la eficiencia del pr
 
 <hr>
 
-# Pareto dinamico vendedores:   
+##  Pareto dinamico vendedores:   
 
 | # | KPI | Descripción | Meta |   Cómo hacerlo  |  
 | - | -------- | ----------- | ---------- | --------|
