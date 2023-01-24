@@ -1,7 +1,17 @@
 # <h1 align=center> 📊 **Diccionario de KPI´S:** 📈 </h1>
+<hr>  
+
+# Índice  
+
++ [Performance Ventas.](#performance_ventas)  
++ [Logistica.](#logistica)  
++ [Pareto dinamico vendedores.](#pareto_dinamico_vendedores)  
 
 
-## Performance Ventas:  
+<hr>  
+
+
+## Performance_Ventas:  
 El objetivo general para la empresa es mejorar el rendimiento del negocio mediante la evaluación y el seguimiento del éxito de las estrategias de ventas, marketing y costos utilizando los indicadores de desempeño en ventas comparativo (IDV), ticket medio, cumplimiento de órdenes (ICO) e eficiencia en el costo del flete (IECF) con metas específicas para cada indicador.  
 
 
@@ -27,7 +37,7 @@ El objetivo común para la empresa en logística es mejorar la eficiencia del pr
 
 <hr>
 
-##  Pareto dinamico vendedores:   
+##  Pareto_dinamico_vendedores:   
 
 | # | KPI | Descripción | Meta |   Cómo hacerlo  |  
 | - | -------- | ----------- | ---------- | --------|
