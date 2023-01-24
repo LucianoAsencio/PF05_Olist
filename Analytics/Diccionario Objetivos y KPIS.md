@@ -1,3 +1,5 @@
+# <h1 align=center> 📊 **Diccionario de KPI´S:** 📈 </h1>
+
 
 # Performance Ventas:  
 El objetivo general para la empresa es mejorar el rendimiento del negocio mediante la evaluación y el seguimiento del éxito de las estrategias de ventas, marketing y costos utilizando los indicadores de desempeño en ventas comparativo (IDV), ticket medio, cumplimiento de órdenes (ICO) e eficiencia en el costo del flete (IECF) con metas específicas para cada indicador.  
