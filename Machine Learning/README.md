@@ -1,5 +1,10 @@
 <h1 align=center> Machine Learning </h1>
 
+<p align="center">
+<img src="https://connect.ignatiuz.com/hs-fs/hubfs/AI%20and%20Deep%20Learning.gif?width=1000&name=AI%20and%20Deep%20Learning.gif"   
+>
+</p>
+
 ## Índice:
 
 + [1- Introducción.](#introducción)
