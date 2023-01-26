@@ -1,6 +1,6 @@
 use olist_pf;
 -- Limpieza sobre la columna sellers_city en tabla sellers
-/*
+
 # Se ajustan las ciudades a "sao paulo" en una lista de ciudades con diferente formato
 UPDATE sellers
 SET seller_city = 'sao paulo'
@@ -21,7 +21,6 @@ SET seller_city = SUBSTRING_INDEX(seller_city, '/', 1);
 # Lo mismo pero la barra es invertida ("\")
 UPDATE sellers
 SET seller_city = SUBSTRING_INDEX(seller_city, '\\', 1);
-*/
 
 #se limpian los datos mal escritos: 
 
@@ -60,6 +59,14 @@ WHERE seller_city = 'lages - sc';
 UPDATE sellers
 SET seller_city = "sao miguel d'oeste"
 WHERE seller_city = "sao miguel do oeste";
+
+UPDATE sellers
+SET seller_city = 'maringa'
+WHERE seller_city = 'vendas@creditparts.com.br';
+
+UPDATE sellers
+SET seller_city = 'rio de janeiro'
+WHERE seller_city = '04482255';
 
 -- se corrigen 4 fechas que estan mal cargadas en order_items
 UPDATE order_items
