@@ -39,7 +39,7 @@ Como objetivos en esta instancia nos planteamos:
 
 **RDS** es un servicio que se encarga de proporcionarnos una base de datos relacional con el motor de MySQL, y **EC2** por su parte, nos provee de un sistema maleable en el que montamos una imagen de Linux, donde instalamos Airflow y demás dependencias necesarias para la automatización.
 
-**Python** y **pandas** se encargan de, mediante scripts, construir la estructura y aplicar los cambios necesarios para la extracción, limpieza y carga de los datos.
+**Python** y **pandas** se encargan de, mediante scripts, construir la estructura y aplicar los cambios necesarios para la extracción, limpieza y carga de los datos. [Informe de ETL](https://www.notion.so/Informe-ETL-9190fc70e4d9405492c799a27b06418d)
 
 **MySQL** es en donde va a estar creado nuestro Data Warehouse y desde allí nos encargamos de realizar tareas de mantenimiento que se hayan pasado por alto en algún proceso de limpieza, y también de generar las tablas necesarias para que tanto el área de Analytics como de ML, puedan alimentarse correctamente.
 
