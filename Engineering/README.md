@@ -1,9 +1,5 @@
 # <h1 align=center>***Data Engineering***</h1>
 
-<p align="center">
-<img src=""  height=400>
-</p>
-
 ## **TABLA DE CONTENIDO**  
 + [1- Introducción.](#introducción) 
 + [2- Objetivos de trabajo.](#objetivos-de-trabajo)
