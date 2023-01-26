@@ -74,6 +74,6 @@ Hay tres puntos a remarcar:
 
 ## Conclusiones:
 
-+ Es posible predecir el review_score que tendrá una orden utilizando un modelo de Regresión y si bien no hay demasiadas correlaciones fuertes incluso luego de implementar nuevas features, es evidente que uno de los puntos que influye en la calificación es el tiempo de envío de la orden, con esta información, los vendedores pueden optar por otras opciones a la hora de entregar el pedido, como por ejemplo, proponerle al comprador que retire su producto por el local en caso de ser posible.
++ Es posible predecir el review_score que tendrá una orden utilizando un modelo de Regresión y si bien no hay demasiadas correlaciones fuertes incluso luego de implementar nuevas features, es evidente que uno de los puntos que influye en la calificación es el tiempo de envío de la orden, con esta información, los vendedores pueden optar por otras opciones a la hora de realizar una publicación para obtener una puntuación mejor en las ordenes.
 
 + Si queremos hacer una aplicación para determinar el método de envío óptimo podemos apoyarnos de un modelo de clusterización para agrupar nuestros productos por tamaño, aunque al ser éste un modelo no supervisado con las limitaciones y problemáticas que significa, lo recomendable es continuar el proceso de forma supervisada almenos para el resto de parámetros, y así, crear una aplicación que nos otorgue resultados de calidad.
