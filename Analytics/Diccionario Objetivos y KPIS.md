@@ -8,8 +8,10 @@
 + [Pareto dinamico vendedores.](#pareto_dinamico_vendedores)  
 
 
-<hr>  
-## Observaciones  
+<hr>   
+
+### Observaciones  
+
 Las metas propuestas se basan en la comparación entre el año 2017 y el año 2018.  
 
 ## Performance_Ventas:  
