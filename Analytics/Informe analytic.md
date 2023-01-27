@@ -90,7 +90,7 @@ Pareto.
 `MedidasParetoProd:` Tiene las métricas que se utilizaron para realizar el Pareto del
 dashboard “clientes”.  
 `Medidas:` Tiene la mayoría de las métricas generales que se usan.  
-`Medidaslog:` tiene las métricas que se usaron para la sección de “Logistica”.
+`Medidaslog:` tiene las métricas que se usaron para la sección de “Logistica”.  
 ` MedidasParetoSeller:` Tiene las métricas que se utilizaron para realizar el Pareto de
 “Sellers”.  
 `Status:` Se utiliza para activar o desactivar el swich que cambia de modo claro a oscuro.  
