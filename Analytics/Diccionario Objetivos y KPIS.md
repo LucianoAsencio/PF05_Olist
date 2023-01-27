@@ -42,3 +42,12 @@ El objetivo común para la empresa en logística es mejorar la eficiencia del pr
 | # | KPI | Descripción | Meta |   Cómo hacerlo  |  
 | - | -------- | ----------- | ---------- | --------|
 | 1 | Porcentaje de los mejores vendedores (PMV)    | Este indicador utiliza el principio de Pareto, el cual establece que el 80% de los resultados proviene del 20% de las causas. El KPI Pareto dinámico muestra el porcentaje de vendedores que generan el 70%, 80% o 90% de los ingresos totales de la empresa.     |Esto permite a los gerentes tomar decisiones informadas sobre cómo mejorar el rendimiento de los vendedores y aumentar los ingresos de la empresa.| Crea un ranking de los mejores vendedores ordenando la tabla por ventas de mayor a menor. Agrega una columna de acumulado de ventas, sumando las ventas de cada vendedor a medida que se va avanzando en el ranking. Configurarlo  para que muestre el objetivo deseado (70%, 80% o 90% de las ventas totales) en el gráfico. | 
+
+<hr>
+
+## Fidelización de los compradores hacia sus vendedores
+
+| # | KPI | Descripción | Meta |   Cómo hacerlo  |  
+| - | -------- | ----------- | ---------- | --------|
+
+| 1 | Net Promoter Score (NPS)    | Este indicador nos brinda una puntuación de que tan bien es puntuado el vendedor, a tal punto de que el comprador posiblemente promueva la compra entre sus allegados. Por el otro lado también nos permite saber el grado de descontento y si es alto, la probabilidad de que el vendedor posea graves críticas y pierda ventas es mayor. Se utiliza un rango de puntuación entre -100 a 100, cuando se supera el 0 nos indica que hay más promotores que detractores. La fórmula es NPS = %Promotores - %Detractores. Serán promotores aquellos que puntuaron con 5 o 4, detractores los que puntuaron con 2 o 1 y neutros los que puntuaron 3. | No basta con que el número sea positivo. Como meta pretendemos llegar a 70 puntos en este KPI | Para lograrlo es menester conocer que tantos detractores tenemos, ubicarlos y entender la causa de su descontento, si el problema refiere a alguna cuestión de olist (por ejemplo entregas) se puede plantear una solución.
