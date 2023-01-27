@@ -49,5 +49,4 @@ El objetivo común para la empresa en logística es mejorar la eficiencia del pr
 
 | # | KPI | Descripción | Meta |   Cómo hacerlo  |  
 | - | -------- | ----------- | ---------- | --------|
-
 | 1 | Net Promoter Score (NPS)    | Este indicador nos brinda una puntuación de que tan bien es puntuado el vendedor, a tal punto de que el comprador posiblemente promueva la compra entre sus allegados. Por el otro lado también nos permite saber el grado de descontento y si es alto, la probabilidad de que el vendedor posea graves críticas y pierda ventas es mayor. Se utiliza un rango de puntuación entre -100 a 100, cuando se supera el 0 nos indica que hay más promotores que detractores. La fórmula es NPS = %Promotores - %Detractores. Serán promotores aquellos que puntuaron con 5 o 4, detractores los que puntuaron con 2 o 1 y neutros los que puntuaron 3. | No basta con que el número sea positivo. Como meta pretendemos llegar a 70 puntos en este KPI | Para lograrlo es menester conocer que tantos detractores tenemos, ubicarlos y entender la causa de su descontento, si el problema refiere a alguna cuestión de olist (por ejemplo entregas) se puede plantear una solución.
