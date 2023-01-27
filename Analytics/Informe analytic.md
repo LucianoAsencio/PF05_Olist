@@ -10,7 +10,8 @@
 + [Proceso_preliminar.](#proceso_preliminar)  
 + [Dashboard.](#dashboard)  
      - [Nivel_estratégico.](#nivel_estratégico)  
-     - [Proceso_preliminar.](#proceso_preliminar)  
+     - [Logística.](#logística)  
+     - [Pareto_dinámico_vendedores.](#pareto_dinámico_vendedores)  
 
 
  <hr>  
@@ -110,10 +111,46 @@ En base a los kpis realizados se puede ver un crecimiento en los ingresos del 21
 - Sugerencia:  
 Considerar promociones y campañas enfocadas en aumentar el uso de tarjeta de crédito como forma de pago.  
 
+##### Logística
+En cuanto a la logística, es importante analizar el tiempo de entrega y los envíos retrasados para ver cómo afectan a las ventas y los fletes.
+
+<p align="center">
+
+<img src="https://cdn.discordapp.com/attachments/1064924470072049755/1068361354127343726/image.png"  height=400>
+</p>
+
+Aunque en general se observa que la mayoría de las entregas se realizan a tiempo (98%), cuando hay retrasos, estos suelen ser de alrededor de 11.5 días.  
+Sugerencia:
+Se sugiere considerar promociones y campañas enfocadas en aumentar el uso de tarjeta de
+crédito como forma de pago.  
 
 
+<p align="center">
+
+<img src="https://cdn.discordapp.com/attachments/1064924470072049755/1068361354127343726/image.png"  height=400>
+</p>
 
 
+Vemos que la mayoría de los clientes y vendedores son de la zona sureste del país por eso los precios de fletes y tiempo de esperas son menores, esto puede ser un factor por el cual la  mayoría de las ordenes sean de esta zona. 
+En su contraparte los precios de flete y envío al norte son demasiado altos lo que provoca pocas compras. Esto se puede deber a la poca cantidad de vendedores en la zona y a que las bases logísticas están principalmente en el sur y sureste, lo que puede provocar mayor tardanza o costos de envíos en el norte.  
+
+Sugerencia:  
+Se recomienda analizar la posibilidad de expandir la presencia de vendedores en la zona norte del país para reducir los costos de envío y aumentar las compras en esa región. Además, se sugiere considerar estrategias para mejorar la eficiencia en la entrega de paquetes livianos, ya que son los que se compran con mayor frecuencia. Se puede considerar la posibilidad de negociar mejores tarifas con proveedores de transporte y/o establecer alianzas estratégicas con empresas locales.   
+
+
+#### Pareto_dinámico_vendedores   
+
+Pareto dinámico permite identificar a los vendedores que contribuyen en mayor medida al
+rendimiento de las ventas, así como también los vendedores que tienen un menor
+rendimiento y los que están inactivos.
+
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/109487557/215000079-06202a52-996d-480e-bc13-2fe02c30b3ea.png"  height=400>
+</p>
+
+Sugerencia  
+Invertir recursos en el segmento de vendedores que representan el 22% de los ingresos, darles incentivos y mejorar su desempeño. También se recomienda analizar y tomar acciones en los 712 vendedores inactivos para aumentar su rendimiento y contribuir al crecimiento de los ingresos.
 
 
 
