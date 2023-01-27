@@ -1,0 +1,73 @@
+Primero que nada levantamos el server en aws, nos conectamos
+por putty con un key pair.
+Abrimos una consola y empzamos instalando python
+
+sudo apt-get install python
+
+
+despues instalamos pip
+
+sudo apt-get install python3-pip
+
+
+despues instalamos venv
+
+sudo pip install virtualenv
+
+
+despues creamos un entorno virtual que se llama venv
+
+python3 -m venv venv
+
+
+abrimos otra consola e ingresamos en ambas:
+ 
+entramos en el venv
+
+source venv/bin/activate
+
+
+seteamos variables de entorno importantes para el funcionamiento
+de airflow
+
+export AIRFLOW_HOME=`pwd`/airflow
+
+
+quitamos los dags de ejemplo
+
+export AIRFLOW__CORE__LOAD_EXAMPLES=false
+
+
+despues en la primer consola instalamos airflow
+
+pip install apache-airflow
+
+
+inicializamos la base de datos
+
+airflow db init
+
+
+y creamos el usuario de airflow
+
+airflow users create \
+    --username admin \
+    --firstname Test\
+    --lastname Test\
+    --role Admin \
+    --password password\
+    --email testemail@gmail.com
+
+
+en la primer consola ejecutamos el servidor de airflow
+
+airflow webserver --port 8080
+
+
+y en la segunda consola ejecutamos el scheduler
+
+airflow scheduler
+
+
+
+Por último, realizamos otra conexión con VSC mediante SSH para acceder a los archivos del servidor y poder crear los dags con mayor facilidad.
