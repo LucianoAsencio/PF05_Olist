@@ -1,4 +1,4 @@
-# <h1 align=center>  📋**Informe analytic:**📋 </h1>
+# <h1 align=center>  📋Informe analytic:📋 </h1>
 <hr>  
 
 ## Índice  
