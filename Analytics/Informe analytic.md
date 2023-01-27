@@ -1,3 +1,12 @@
+<p align="center">
+
+<img src="https://user-images.githubusercontent.com/109487557/215000302-b55a13f7-ecf4-4959-a89a-250f988e7fee.png"  height=400>
+</p>
+
+
+
+
+
 # <h1 align=center>  📋 Informe analytic 📋 </h1>
 <hr>  
 
