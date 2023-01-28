@@ -18,6 +18,7 @@
 + [Público_objetivo.](#público_objetivo)  
 + [Proceso_preliminar.](#proceso_preliminar)  
 + [Dashboard.](#dashboard)  
+     - [Contexto.](#contexto)  
      - [Nivel_estratégico.](#nivel_estratégico)  
      - [Logística.](#logística)  
      - [Pareto_dinámico_vendedores.](#pareto_dinámico_vendedores)  
@@ -99,12 +100,27 @@ cambios de colores.
 
 <hr>  
 
-## Dashboard  
+## Dashboard      
+
+### Contexto:  
+
+  Durante el período de 2016 a 2018
+
+- Para el año 2016:  
+  valor_corregido_2016 = (valor_original / (1 + inflación_2016))  
+
+- Para el año 2017:
+  valor_corregido_2017 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017)) 
+-Para el año 2018:
+  valor_corregido_2018 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017) / (1 + inflación_2018)) 
+
 
 Para la creación del Dashboard se utilizó el software PowerBI, donde se crearon 2 Dashboards diferentes, uno enfocado en Olist y otro en sus clientes(vendedores).  
 Una breve aclaración sobre los “KPIS”, los mismos se encuentran en un diccionario con la explicación y uso para cada uno. Se sugiere leerlo para una mayor comprensión del dashboard.  
 `Diccionario KPIS`  
 https://github.com/LucianoAsencio/PF05_Olist/blob/d25970fd6d2a662b6523b1326bf680d657c06091/Analytics/Diccionario%20Objetivos%20y%20KPIS.md   
+
+
 
 **El dashboard enfocado a Olist:**  
 
