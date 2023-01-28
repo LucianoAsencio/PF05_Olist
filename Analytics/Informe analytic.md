@@ -104,15 +104,15 @@ cambios de colores.
 
 ### Contexto:  
 
-  Durante el período de 2016 a 2018
+  Durante el período de 2016 a 2018  
 
-- Para el año 2016:  
-  valor_corregido_2016 = (valor_original / (1 + inflación_2016))  
+- Para el año 2016:   
+  valor_corregido_2016 = (valor_original / (1 + inflación_2016))    
 
-- Para el año 2017:
-  valor_corregido_2017 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017)) 
--Para el año 2018:
-  valor_corregido_2018 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017) / (1 + inflación_2018)) 
+- Para el año 2017:  
+  valor_corregido_2017 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017))   
+-Para el año 2018:  
+  valor_corregido_2018 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017) / (1 + inflación_2018))   
 
 
 Para la creación del Dashboard se utilizó el software PowerBI, donde se crearon 2 Dashboards diferentes, uno enfocado en Olist y otro en sus clientes(vendedores).  
