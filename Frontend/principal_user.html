@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/stylesmain.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+  </head>
+
+  <body>
+
+    <header>
+      <div class="header-container"><a>¡Bienvenido!<br>ID usuario</a></div>
+      <button id="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></button>
+    </header>
+
+    <nav>
+      <button id="inicio" autofocus="true">Inicio<i class="fas fa-house-user"></i></button>
+      <button id="graficas">Graficas<i class="fas fa-chart-line"></i></button>
+      <button id="modelos">Modelos<i class="fas fa-calculator"></i></button>
+      <button1 id="toggle-nav"><</button>
+    </nav>
+
+    <section id="sectionContent">
+      <b>En este portal, podrá revisar datos tanto generales como detallados sobre sus ventas.
+        <br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... 
+        <br><br> En la pestaña 'Modelos' tendrá ...
+      </b>
+    </section>
+
+    <script>
+
+    const btnInicio = document.getElementById("inicio");
+    const btnGraficas = document.getElementById("graficas");
+    const btnModelos = document.getElementById("modelos");
+    const sectionContent = document.getElementById("sectionContent");
+
+    btnInicio.addEventListener("click", function() {
+      sectionContent.innerHTML = "<b>En este portal, podrá revisar datos tanto generales como detallados sobre sus ventas.<br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... <br><br> En la pestaña 'Modelos' tendrá ...</b>";
+    });
+    btnGraficas.addEventListener("click", function() {
+      sectionContent.innerHTML = '<iframe title="Report Section" width="1500" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiZmNhYmRlMTQtM2U3Yi00M2FiLTk0MzEtMTQ3YzUyYTUwNDMzIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
+    });
+    btnModelos.addEventListener("click", function() {
+      sectionContent.innerHTML = "<b>Modelos user</b>";
+    });
+    window.onload = function(){
+        btnInicio.classList.add("active");
+    }
+
+    const btnLogout = document.getElementById("logout");
+    btnLogout.addEventListener("click", function() {
+      location.replace("login.html");
+    });
+
+    const buttons = document.querySelectorAll("button");
+    buttons.forEach(button => {
+        button.addEventListener("click", function() {
+            buttons.forEach(b => b.classList.remove("always-pressed"));
+            this.classList.add("always-pressed");
+        });
+    });
+
+    var toggleNav = document.getElementById("toggle-nav");
+    var contracted = true;
+    toggleNav.addEventListener("click", function() {
+      var nav = document.getElementsByTagName("nav")[0];
+      var section = document.getElementById("sectionContent");
+      var buttons = nav.getElementsByTagName("button");
+      if (contracted) {
+        nav.style.width = "30%";
+        section.style.marginLeft = "-5vw";
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.add("hide-text");
+        }
+        toggleNav.innerHTML = ">";
+        toggleNav.classList.add("contracted");
+      } else {
+        nav.style.width = "100%";
+        section.style.marginLeft = "0vw";
+        for (var i = 0; i < buttons.length; i++) {
+          buttons[i].classList.remove("hide-text");
+        }
+        toggleNav.innerHTML = "<";
+        toggleNav.classList.remove("contracted");
+      }
+      contracted = !contracted;
+    });
+    </script>
+
+  </body>
+
+</html>
