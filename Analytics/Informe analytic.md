@@ -110,8 +110,9 @@ cambios de colores.
   valor_corregido_2016 = (valor_original / (1 + inflación_2016))    
 
 - Para el año 2017:  
-  valor_corregido_2017 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017))   
--Para el año 2018:  
+  valor_corregido_2017 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017))  
+  
+- Para el año 2018:  
   valor_corregido_2018 = (valor_original / (1 + inflación_2016) / (1 + inflación_2017) / (1 + inflación_2018))   
 
 
