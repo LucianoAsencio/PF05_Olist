@@ -120,22 +120,25 @@ Resume las principales métricas y KPIs del negocio a lo largo del tiempo y por 
 
 <p align="center">
 
-<img src="https://media.discordapp.net/attachments/1064924470072049755/1068350863841710090/image.png?width=1046&height=559"  height=400>
+<img src="https://user-images.githubusercontent.com/109487557/215298027-f356df87-f918-4824-aa1d-34704420fed2.png"  height=400>
 </p>
 
-En base a los kpis realizados se puede ver un crecimiento en los ingresos del 21% respecto al año anterior, ingresos por fletes del 27% y un aumento del ticket medio en ingresos y fletes y en las metas propuestas. Tambien se  puede ver un aumento en las ordenes de 20%. Se obvervo que la mayoría de los pagos se realizan con tarjeta de crédito.  
+
+
+En base a los kpis realizados se puede ver un crecimiento en los ingresos del 21% respecto al año anterior, ingresos por fletes del 27% superando la metas y un aumento del ticket medio en ingresos y fletes aunque no llega a alcanzar la metas propuestas. Tambien se  puede ver un aumento en las ordenes de 20%. Se obvervo que la mayoría de los pagos se realizan con tarjeta de crédito.  
 - Sugerencia:  
-Considerar promociones y campañas enfocadas en aumentar el uso de tarjeta de crédito como forma de pago.  
+Considerar promociones y campañas enfocadas en aumentar el uso de tarjeta de crédito como forma de pago ya que la mayoria de los compradores usan este medio.  
+Otra opcion es promocionar los medios de pagos menos habituales como Debito ya que haria que perdamos menos dinero en intereses.
 
 ##### Logística
 En cuanto a la logística, es importante analizar el tiempo de entrega y los envíos retrasados para ver cómo afectan a las ventas y los fletes.
 
 <p align="center">
 
-<img src="https://cdn.discordapp.com/attachments/1064924470072049755/1068361354127343726/image.png"  height=400>
+<img src="https://user-images.githubusercontent.com/109487557/215298153-608fa5ab-3afd-4800-8b4c-1d78c8e40cc9.png"  height=400>
 </p>
 
-Aunque en general se observa que la mayoría de las entregas se realizan a tiempo (98%), cuando hay retrasos, estos suelen ser de alrededor de 11.5 días.  
+En general se observa que la mayoría de las entregas se realizan a tiempo (98%) no cumpliendo con la meta pero quedando muy cerca, cuando hay retrasos, estos suelen ser de alrededor de 10 días superando las expectativas.  
 Sugerencia:
 Se sugiere considerar promociones y campañas enfocadas en aumentar el uso de tarjeta de
 crédito como forma de pago.  
@@ -143,7 +146,7 @@ crédito como forma de pago.
 
 <p align="center">
 
-<img src="https://cdn.discordapp.com/attachments/1064924470072049755/1068361354127343726/image.png"  height=400>
+<img src="https://user-images.githubusercontent.com/109487557/215298197-f5ff8188-98aa-40d4-9d57-af5a0374ea13.png"  height=400>
 </p>
 
 
@@ -162,8 +165,9 @@ rendimiento y los que están inactivos.
 
 <p align="center">
 
-<img src="https://user-images.githubusercontent.com/109487557/215000079-06202a52-996d-480e-bc13-2fe02c30b3ea.png"  height=400>
+<img src="https://user-images.githubusercontent.com/109487557/215298221-a8f439b1-1da0-4c2f-ab48-ecd472463457.png"  height=400>
 </p>
+
 
 Sugerencia  
 Invertir recursos en el segmento de vendedores que representan el 22% de los ingresos, darles incentivos y mejorar su desempeño. También se recomienda analizar y tomar acciones en los 712 vendedores inactivos para aumentar su rendimiento y contribuir al crecimiento de los ingresos.
