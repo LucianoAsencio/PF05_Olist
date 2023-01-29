@@ -102,7 +102,7 @@ cambios de colores.
 
 ## Dashboard      
 
-### Contexto:  
+##### Contexto:  
 
 Para la creación del Dashboard se utilizó el software PowerBI, donde se crearon 2 Dashboards diferentes, uno enfocado en Olist y otro en sus clientes(vendedores).  
 Una breve aclaración sobre los “KPIS”, los mismos se encuentran en un diccionario con la explicación y uso para cada uno. Se sugiere leerlo para una mayor comprensión del dashboard.  
