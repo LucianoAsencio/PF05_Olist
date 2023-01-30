@@ -8,63 +8,310 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/stylesmain.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
   </head>
 
   <body>
 
     <header>
-      <div class="header-container"><a>¡Bienvenido!<br>fernandoashur@olist.com</a></div>
-      <button id="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></button>
+      <div class="header-container"><a>Olist Metrics</a></div>
+        <div class="nav">
+          <button id="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></button>
+          <button id="modelos">Modelo<i class="fas fa-calculator"></i></button>
+          <button id="graficas">Gráficas<i class="fas fa-chart-line"></i></button>
+          <button id="info">Info<i class="fas fa-info-circle"></i></button>
+        </div>
     </header>
 
-    <nav>
-      <button id="inicio" autofocus="true">Inicio<i class="fas fa-house-user"></i></button>
-      <button id="graficas">Gráficas<i class="fas fa-chart-line"></i></button>
-      <button id="modelos">Modelos<i class="fas fa-calculator"></i></button>
-      <button1 id="toggle-nav"><</button>
-    </nav>
-
     <section id="sectionContent">
-      <b>En este portal, podrá revisar datos tanto generales como detallados sobre los vendedores de toda la aplicación.
-        <br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... 
-        <br><br> En la pestaña 'Modelos' tendrá ...
-      </b>
+      <div class="sectionInicio">
+        <h1 class="hero__title">¡Bienvenido a Olist Metrics!</h1><h3>fernandoashur@olist.com</h3>
+        <p class="hero__paragraph">Esta es una herramienta dinámica donde los representantes de Olist podrán ver gráficas detalladas sobre ingresos, logística, vendedores y compradores, además, cuenta con una aplicación para determinar el mejor método de envío de las órdenes por producto. Para comenzar, diríjase a la pestaña "info".</p>
+        <div class="inicioimg-container">
+          <img class="inicioimg" src="src\img\userinicio.png">
+          <img class="inicioimg" src="src\img\olistinicio.png">
+        </div>
+      </div>
     </section>
 
     <script>
 
-    const btnInicio = document.getElementById("inicio");
+    const btninfo = document.getElementById("info");
     const btnGraficas = document.getElementById("graficas");
     const btnModelos = document.getElementById("modelos");
     const sectionContent = document.getElementById("sectionContent");
 
-    btnInicio.addEventListener("click", function() {
-      sectionContent.innerHTML = "<b>En este portal, podrá revisar datos tanto generales como detallados sobre los vendedores de toda la aplicación.<br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... <br><br> En la pestaña 'Modelos' tendrá ...</b>";
+    btninfo.addEventListener("click", function() {
+      sectionContent.innerHTML =  '<div id="cardg">' +
+                                    '<div id="card-content">' +
+                                      '<div id="card-title">' +
+                                        '<h2>Gráficas</h2>' +
+                                        '<div class="underline-title"></div>' +
+                                      '</div>' +
+                                    '</div>' +
+                                    '<div class="cardcontentinfo"><c>En esta pestaña encontrará un dashboard dinámico con información gráfica y detallada sobre:<br><br>•Performance ventas<br>•Logística General<br>•Logística por Región<br>•Pareto de Vendedores<br>•Clientes</c></div>' +
+                                  '</div>' +
+                                  '<div id="cardm">' + 
+                                    '<div id="card-content"> ' +
+                                      '<div id="card-title"> ' +
+                                        '<h2>Método de Envío Óptimo</h2> ' +
+                                        '<div class="underline-title"></div> ' +
+                                      '</div> ' +
+                                    '</div> ' +
+                                    '<div class="cardcontentinfo"><c>En esta pestaña podrá cargar los datos de las órdenes que aún no tienen una entrega asignada para calcular el método de envío óptimo según las características del paquete y los puntos de salida y llegada. Además, podrá exportar los datos de la tabla a un archivo .csv</c></div>' +
+                                  '</div>';
     });
     btnGraficas.addEventListener("click", function() {
-      sectionContent.innerHTML = '<iframe title="proyecto final olist" width="0" height="0" src="https://app.powerbi.com/view?r=eyJrIjoiYTU1ODc2ZDQtMTdhYy00MjUxLWIxMzgtYTBjZjhhNmU4MGZmIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
+      sectionContent.innerHTML =  '<iframe title="proyecto final olist" width="0" height="0" src="https://app.powerbi.com/view?r=eyJrIjoiYTU1ODc2ZDQtMTdhYy00MjUxLWIxMzgtYTBjZjhhNmU4MGZmIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
     });
+
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#cardg")) {
+      sectionContent.innerHTML =  '<iframe title="proyecto final olist" width="0" height="0" src="https://app.powerbi.com/view?r=eyJrIjoiYTU1ODc2ZDQtMTdhYy00MjUxLWIxMzgtYTBjZjhhNmU4MGZmIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
+    }});
+
     btnModelos.addEventListener("click", function() {
-  sectionContent.innerHTML = '<div id="card">' +
-                  '<div id="card-content">' +
-                      '<div id="card-title">' +
-                      '<h2>Método de envío óptimo</h2>' +
-                      '<div class="underline-title"></div>' +
-                      '</div>' +
-                  '</div>' +
-                '</div>';
-});
+    sectionContent.innerHTML =  '<div class="table-container">' +
+                                    '<div>' +
+                                      '<table>' +
+                                        '<tr>' +
+                                          '<th style="border-top-left-radius: 10px">Order ID</th>' +
+                                          '<th>Product Size</th>' +
+                                          '<th>Product Weight (g)</th>' +
+                                          '<th>Seller Zip Code</th>' +
+                                          '<th>Seller City</th>' +
+                                          '<th>Seller State</th>' +
+                                          '<th>Customer Zip Code</th>' +
+                                          '<th>Customer City</th>' +
+                                          '<th>Customer State</th>' +
+                                          '<th style="border-top-right-radius: 10px">Shipping Method</th>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                      '</table>' +
+                                    '</div>' +
+                                    '<div class="button-model-container"><div><button id="carga" class="table-btn">Cargar Datos</button></div><div><button id="calcular" class="table-btn">Calcular</button></div><div><button id="exportar" class="table-btn">Exportar Tabla</button></div></div>' + 
+                                '</div>' +
+                                '<div class="logistic-container">' +
+                                  '<img class="logisticimg" src="src/img/logistic.png">' + 
+                                '</div>' ;
+    });
 
-                
-
-
-
-
-
-
-    window.onload = function(){
-        btnInicio.classList.add("active");
-    }
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#cardm")) {
+      sectionContent.innerHTML =  '<div class="table-container">' +
+                                    '<div>' +
+                                      '<table>' +
+                                        '<tr>' +
+                                          '<th style="border-top-left-radius: 10px">Order ID</th>' +
+                                          '<th>Product Size</th>' +
+                                          '<th>Product Weight (g)</th>' +
+                                          '<th>Seller Zip Code</th>' +
+                                          '<th>Seller City</th>' +
+                                          '<th>Seller State</th>' +
+                                          '<th>Customer Zip Code</th>' +
+                                          '<th>Customer City</th>' +
+                                          '<th>Customer State</th>' +
+                                          '<th style="border-top-right-radius: 10px">Shipping Method</th>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                      '</table>' +
+                                    '</div>' +
+                                    '<div class="button-model-container"><div><button id="carga" class="table-btn">Cargar Datos</button></div><div><button id="calcular" class="table-btn">Calcular</button></div><div><button id="exportar" class="table-btn">Exportar Tabla</button></div></div>' + 
+                                '</div>' +
+                                '<div class="logistic-container">' +
+                                  '<img class="logisticimg" src="src/img/logistic.png">' + 
+                                '</div>' ;
+    }});
 
     const btnLogout = document.getElementById("logout");
     btnLogout.addEventListener("click", function() {
@@ -79,30 +326,274 @@
         });
     });
 
-    var toggleNav = document.getElementById("toggle-nav");
-    var contracted = true;
-    toggleNav.addEventListener("click", function() {
-      var nav = document.getElementsByTagName("nav")[0];
-      var section = document.getElementById("sectionContent");
-      var buttons = nav.getElementsByTagName("button");
-      if (contracted) {
-        nav.style.width = "30%";
-        section.style.marginLeft = "-5vw";
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.add("hide-text");
-        }
-        toggleNav.innerHTML = ">";
-        toggleNav.classList.add("contracted");
-      } else {
-        nav.style.width = "100%";
-        section.style.marginLeft = "0vw";
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove("hide-text");
-        }
-        toggleNav.innerHTML = "<";
-        toggleNav.classList.remove("contracted");
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#carga")) {
+    // acción a realizar cuando se haga clic en el botón "carga"
+    sectionContent.innerHTML =  '<div class="table-container">' +
+                                    '<div>' +
+                                      '<table>' +
+                                        '<tr>' +
+                                          '<th style="border-top-left-radius: 10px">Order ID</th>' +
+                                          '<th>Product Size</th>' +
+                                          '<th>Product Weight (g)</th>' +
+                                          '<th>Seller Zip Code</th>' +
+                                          '<th>Seller City</th>' +
+                                          '<th>Seller State</th>' +
+                                          '<th>Customer Zip Code</th>' +
+                                          '<th>Customer City</th>' +
+                                          '<th>Customer State</th>' +
+                                          '<th style="border-top-right-radius: 10px">Shipping Method</th>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>e481f51cbdc54678b7cc49136f2d6af7</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>800.0</td>' +
+                                          '<td>13023</td>' +
+                                          '<td>campinas</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>13844</td>' +
+                                          '<td>mogi guacu</td>' +
+                                          '<td>SP</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>53cdb2fc8bc7dce0b6741e2150273451</td>' +
+                                          '<td>Mediano</td>' +
+                                          '<td>1500.0</td>' +
+                                          '<td>20031</td>' +
+                                          '<td>rio de janeiro</td>' +
+                                          '<td>RJ</td>' +
+                                          '<td>20031</td>' +
+                                          '<td>rio de janeiro</td>' +
+                                          '<td>RJ</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>47770eb9100c2d0c44946d9cf07ec65d</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>250.0</td>' +
+                                          '<td>1529</td>' +
+                                          '<td>sao paulo</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>1529</td>' +
+                                          '<td>sao paulo</td>' +
+                                          '<td>SP</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>949d5b44dbf5de918fe9c16f97b45f8a</td>' +
+                                          '<td>Grande</td>' +
+                                          '<td>3850.0</td>' +
+                                          '<td>80310</td>' +
+                                          '<td>curitiba</td>' +
+                                          '<td>PR</td>' +
+                                          '<td>75110</td>' +
+                                          '<td>anapolis</td>' +
+                                          '<td>GO</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>ad21c59c0840e6cb83a9ceb5573f8159</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>220.0</td>' +
+                                          '<td>88705</td>' +
+                                          '<td>tubarao</td>' +
+                                          '<td>SC</td>' +
+                                          '<td>88780</td>' +
+                                          '<td>imbituba</td>' +
+                                          '<td>SC</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>136cce7faa42fdb2cefd53fdc79a6098</td>' +
+                                          '<td>Mediano</td>' +
+                                          '<td>2350.0</td>' +
+                                          '<td>70740</td>' +
+                                          '<td>brasilia</td>' +
+                                          '<td>DF</td>' +
+                                          '<td>70740</td>' +
+                                          '<td>brasilia</td>' +
+                                          '<td>DF</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>e6ce16cb79ec1d90b1da9085a6118aeb</td>' +
+                                          '<td>Grande</td>' +
+                                          '<td>8050.0</td>' +
+                                          '<td>13320</td>' +
+                                          '<td>salto</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>98910</td>' +
+                                          '<td>tres de maio</td>' +
+                                          '<td>RS</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>83018ec114eee8641c97e08f7b4e926f</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>710.0</td>' +
+                                          '<td>45810</td>' +
+                                          '<td>porto seguro</td>' +
+                                          '<td>BA</td>' +
+                                          '<td>14910</td>' +
+                                          '<td>tabatinga</td>' +
+                                          '<td>SP</td>' +
+                                          '<td></td>' +
+                                        '</tr>' +
+                                      '</table>' +
+                                    '</div>' +
+                                    '<div class="button-model-container"><div><button id="carga" class="table-btn">Cargar Datos</button></div><div><button id="calcular" class="table-btn">Calcular</button></div><div><button id="exportar" class="table-btn">Exportar Tabla</button></div></div>' + 
+                                '</div>' +
+                                '<div class="logistic-container">' +
+                                  '<img class="logisticimg" src="src/img/logistic.png">' + 
+                                '</div>' ;
+    }
+    });
+
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#calcular")) {
+    // acción a realizar cuando se haga clic en el botón "calcular"
+    sectionContent.innerHTML =  '<div class="table-container">' +
+                                    '<div>' +
+                                      '<table>' +
+                                        '<tr>' +
+                                          '<th style="border-top-left-radius: 10px">Order ID</th>' +
+                                          '<th>Product Size</th>' +
+                                          '<th>Product Weight (g)</th>' +
+                                          '<th>Seller Zip Code</th>' +
+                                          '<th>Seller City</th>' +
+                                          '<th>Seller State</th>' +
+                                          '<th>Customer Zip Code</th>' +
+                                          '<th>Customer City</th>' +
+                                          '<th>Customer State</th>' +
+                                          '<th style="border-top-right-radius: 10px">Shipping Method</th>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>e481f51cbdc54678b7cc49136f2d6af7</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>800.0</td>' +
+                                          '<td>13023</td>' +
+                                          '<td>campinas</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>13844</td>' +
+                                          '<td>mogi guacu</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>Camioneta</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>53cdb2fc8bc7dce0b6741e2150273451</td>' +
+                                          '<td>Mediano</td>' +
+                                          '<td>1500.0</td>' +
+                                          '<td>20031</td>' +
+                                          '<td>rio de janeiro</td>' +
+                                          '<td>RJ</td>' +
+                                          '<td>20031</td>' +
+                                          '<td>rio de janeiro</td>' +
+                                          '<td>RJ</td>' +
+                                          '<td>Moto</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>47770eb9100c2d0c44946d9cf07ec65d</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>250.0</td>' +
+                                          '<td>1529</td>' +
+                                          '<td>sao paulo</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>1529</td>' +
+                                          '<td>sao paulo</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>Bicicleta</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>949d5b44dbf5de918fe9c16f97b45f8a</td>' +
+                                          '<td>Grande</td>' +
+                                          '<td>3850.0</td>' +
+                                          '<td>80310</td>' +
+                                          '<td>curitiba</td>' +
+                                          '<td>PR</td>' +
+                                          '<td>75110</td>' +
+                                          '<td>anapolis</td>' +
+                                          '<td>GO</td>' +
+                                          '<td>Camion</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>ad21c59c0840e6cb83a9ceb5573f8159</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>220.0</td>' +
+                                          '<td>88705</td>' +
+                                          '<td>tubarao</td>' +
+                                          '<td>SC</td>' +
+                                          '<td>88780</td>' +
+                                          '<td>imbituba</td>' +
+                                          '<td>SC</td>' +
+                                          '<td>Camioneta</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>136cce7faa42fdb2cefd53fdc79a6098</td>' +
+                                          '<td>Mediano</td>' +
+                                          '<td>2350.0</td>' +
+                                          '<td>70740</td>' +
+                                          '<td>brasilia</td>' +
+                                          '<td>DF</td>' +
+                                          '<td>70740</td>' +
+                                          '<td>brasilia</td>' +
+                                          '<td>DF</td>' +
+                                          '<td>Moto</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>e6ce16cb79ec1d90b1da9085a6118aeb</td>' +
+                                          '<td>Grande</td>' +
+                                          '<td>8050.0</td>' +
+                                          '<td>13320</td>' +
+                                          '<td>salto</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>98910</td>' +
+                                          '<td>tres de maio</td>' +
+                                          '<td>RS</td>' +
+                                          '<td>Camion</td>' +
+                                        '</tr>' +
+                                        '<tr>' +
+                                          '<td>83018ec114eee8641c97e08f7b4e926f</td>' +
+                                          '<td>Chico</td>' +
+                                          '<td>710.0</td>' +
+                                          '<td>45810</td>' +
+                                          '<td>porto seguro</td>' +
+                                          '<td>BA</td>' +
+                                          '<td>14910</td>' +
+                                          '<td>tabatinga</td>' +
+                                          '<td>SP</td>' +
+                                          '<td>Camion</td>' +
+                                        '</tr>' +
+                                      '</table>' +
+                                    '</div>' +
+                                    '<div class="button-model-container"><div><button id="carga" class="table-btn">Cargar Datos</button></div><div><button id="calcular" class="table-btn">Calcular</button></div><div><button id="exportar" class="table-btn">Exportar Tabla</button></div></div>' + 
+                                '</div>' +
+                                '<div class="logistic-container">' +
+                                  '<img class="logisticimg" src="src/img/logistic.png">' + 
+                                '</div>' ;
+    }
+    });
+
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#exportar")) {
+    // acción a realizar cuando se haga clic en el botón "exportar"
+    let tabla = document.querySelector("table");
+    let datos = [];
+    for (let i = 0; i < tabla.rows.length; i++) {
+      let fila = [];
+      for (let j = 0; j < tabla.rows[i].cells.length; j++) {
+        fila.push(tabla.rows[i].cells[j].innerHTML);
       }
-      contracted = !contracted;
+      datos.push(fila);
+    }
+    
+    // Exporta los datos a un archivo .csv
+    let csv = Papa.unparse(datos);
+    let link = document.createElement("a");
+    link.href = "data:text/csv;charset=utf-8," + encodeURI(csv);
+    link.download = "envio_optimo.csv";
+    link.click();
+    }
     });
 
     </script>

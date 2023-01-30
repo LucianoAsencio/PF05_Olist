@@ -8,48 +8,300 @@
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="static/stylesmain.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css" integrity="sha384-HzLeBuhoNPvSl5KYnjx0BT+WB0QEEqLprO+NBkkk5gbc67FTaL7XIGa2w1L0Xbgc" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/papaparse@5.3.0/papaparse.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
   </head>
 
   <body>
 
     <header>
-      <div class="header-container"><a>¡Bienvenido!<br>ID usuario</a></div>
-      <button id="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></button>
+      <div class="header-container"><a>Olist Metrics</a></div>
+        <div class="nav">
+          <button id="logout">Cerrar Sesión<i class="fas fa-sign-out-alt"></i></button>
+          <button id="modelos">Modelo<i class="fas fa-calculator"></i></button>
+          <button id="graficas">Gráficas<i class="fas fa-chart-line"></i></button>
+          <button id="info">Info<i class="fas fa-info-circle"></i></button>
+        </div>
     </header>
 
-    <nav>
-      <button id="inicio" autofocus="true">Inicio<i class="fas fa-house-user"></i></button>
-      <button id="graficas">Graficas<i class="fas fa-chart-line"></i></button>
-      <button id="modelos">Modelos<i class="fas fa-calculator"></i></button>
-      <button1 id="toggle-nav"><</button>
-    </nav>
-
     <section id="sectionContent">
-      <b>En este portal, podrá revisar datos tanto generales como detallados sobre sus ventas.
-        <br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... 
-        <br><br> En la pestaña 'Modelos' tendrá ...
-      </b>
+      <div class="sectionInicio">
+        <h1 class="hero__title">¡Bienvenido a Olist Metrics!</h1><h3>User 4869f7a5dfa277a7dca6462dcf3b52b2</h3>
+        <p class="hero__paragraph">Esta es una herramienta dinámica donde usted podrá ver gráficas detalladas sobre ingresos, logística, vendedores y compradores, además, cuenta con una aplicación que le permitirá predecir la calificación promedio a obtener por sus compradores según su publicación. Para comenzar, diríjase a la pestaña "info".</p>
+        <div class="inicioimg-container">
+          <img class="inicioimg" src="src\img\userinicio.png">
+          <img class="inicioimg" src="src\img\olistinicio.png">
+        </div>
+      </div>
     </section>
 
     <script>
 
-    const btnInicio = document.getElementById("inicio");
+    const btninfo = document.getElementById("info");
     const btnGraficas = document.getElementById("graficas");
     const btnModelos = document.getElementById("modelos");
     const sectionContent = document.getElementById("sectionContent");
 
-    btnInicio.addEventListener("click", function() {
-      sectionContent.innerHTML = "<b>En este portal, podrá revisar datos tanto generales como detallados sobre sus ventas.<br><br>En la pestaña 'Gráficas' encontrará un dashboard en el cual podrá ... <br><br> En la pestaña 'Modelos' tendrá ...</b>";
+    btninfo.addEventListener("click", function() {
+      sectionContent.innerHTML =  '<div id="cardg">' +
+                                    '<div id="card-content">' +
+                                      '<div id="card-title">' +
+                                        '<h2>Gráficas</h2>' +
+                                        '<div class="underline-title"></div>' +
+                                      '</div>' +
+                                    '</div>' +
+                                    '<div class="cardcontentinfo"><c>En esta pestaña encontrará un dashboard dinámico con información gráfica y detallada sobre:<br><br>•Métricas Generales<br>•Clientes<br>•Logística<br>•Pareto de Productos</c></div>' +
+                                  '</div>' +
+                                  '<div id="cardm">' + 
+                                    '<div id="card-content"> ' +
+                                      '<div id="card-title"> ' +
+                                        '<h2>Calificación Promedio Predicha</h2> ' +
+                                        '<div class="underline-title"></div> ' +
+                                      '</div> ' +
+                                    '</div> ' +
+                                    '<div class="cardcontentinfo"><c>En esta pestaña podrá predecir la calificación a obtener en una publicación según algunas características como:<br><br>•Precio del Producto<br>•Categoría del producto<br>•N° de fotos en la publicación<br>•Descripción de la publicación</c></div>' +
+                                  '</div>';
     });
     btnGraficas.addEventListener("click", function() {
-      sectionContent.innerHTML = '<iframe title="Report Section" width="1500" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiZmNhYmRlMTQtM2U3Yi00M2FiLTk0MzEtMTQ3YzUyYTUwNDMzIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
+      sectionContent.innerHTML =  '<iframe title="Report Section" width="1500" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiYWI3MjNiOWEtNTU5Mi00MTMzLWIzNDMtMGU5ZTgyODMzYTBmIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
     });
+
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#cardg")) {
+      sectionContent.innerHTML =  '<iframe title="Report Section" width="1500" height="800" src="https://app.powerbi.com/view?r=eyJrIjoiYWI3MjNiOWEtNTU5Mi00MTMzLWIzNDMtMGU5ZTgyODMzYTBmIiwidCI6Ijg5ZDg2ZDQ1LWY5YzItNGYyZS04YjZjLTM0OThmZjliZjgyNiJ9&pageName=ReportSectionb71a57123be856cc5343" frameborder="0" allowFullScreen="true"></iframe>';
+    }});
+    
     btnModelos.addEventListener("click", function() {
-      sectionContent.innerHTML = "<b>Modelos user</b>";
+    sectionContent.innerHTML =  '<div id="card">' +
+                                    '<div id="card-content">' +
+                                      '<div id="card-title">' +
+                                        '<h2>Calificación Promedio Predicha</h2>' +
+                                        '<div class="underline-title"></div>' +
+                                      '</div>' +
+                                    '</div>' +
+                                    '<div>' +
+                                      '<form method="post" class="form" onsubmit="return validateForm()">' +
+                                        '<label for="precio-input" class="d">Precio</label>' +
+                                        '<input id="precio-input" class="form-content" type="number" name="" autocomplete="on" required />' +
+                                        '<label for="categoria-input" class="d">Categoría del Producto</label>' +
+                                        '<select id="categoria-input" class="form-content" required>' +
+                                          '<option value="agro industria e comercio">agro industria e comercio</option>' +
+                                          '<option value="alimentos">alimentos</option>' +
+                                          '<option value="alimentos">alimentos bebidas</option>' +
+                                          '<option value="artes">artes</option>' +
+                                          '<option value="artes e artesanato">artes e artesanato</option>' +
+                                          '<option value="artigos de festas">artigos de festas</option>' +
+                                          '<option value="artigos de natal">artigos de natal</option>' +
+                                          '<option value="audio">audio</option>' +
+                                          '<option value="automotivo">automotivo</option>' +
+                                          '<option value="bebes">bebes</option>' +
+                                          '<option value="bebidas">bebidas</option>' +
+                                          '<option value="beleza saude">beleza saude</option>' +
+                                          '<option value="brinquedos">brinquedos</option>' +
+                                          '<option value="cama mesa banho">cama mesa banho</option>' +
+                                          '<option value="casa conforto">casa conforto</option>' +
+                                          '<option value="casa conforto 2">casa conforto 2</option>' +
+                                          '<option value="casa construcao">casa construcao</option>' +
+                                          '<option value="cds dvds musicais">cds dvds musicais</option>' +
+                                          '<option value="cine foto">cine foto</option>' +
+                                          '<option value="climatizacao">climatizacao</option>' +
+                                          '<option value="consoles games">consoles games</option>' +
+                                          '<option value="construcao ferramentas construcao">construcao ferramentas construcao</option>' +
+                                          '<option value="construcao ferramentas ferramentas">construcao ferramentas ferramentas</option>' +
+                                          '<option value="construcao ferramentas iluminacao">construcao ferramentas iluminacao</option>' +
+                                          '<option value="construcao ferramentas jardim">construcao ferramentas jardim</option>' +
+                                          '<option value="construcao ferramentas seguranca">construcao ferramentas seguranca</option>' +
+                                          '<option value="cool stuff">cool stuff</option>' +
+                                          '<option value="dvds blu ray">dvds blu ray</option>' +
+                                          '<option value="eletrodomesticos">eletrodomesticos</option>' +
+                                          '<option value="eletrodomesticos 2">eletrodomesticos 2</option>' +
+                                          '<option value="eletronicos">eletronicos</option>' +
+                                          '<option value="eletroportateis">eletroportateis</option>' +
+                                          '<option value="esporte lazer">esporte lazer</option>' +
+                                          '<option value="fashion bolsas e acessorios">fashion bolsas e acessorios</option>' +
+                                          '<option value="fashion calcados">fashion calcados</option>' +
+                                          '<option value="fashion esporte">fashion esporte</option>' +
+                                          '<option value="fashion roupa feminina">fashion roupa feminina</option>' +
+                                          '<option value="fashion roupa infanto juvenil">fashion roupa infanto juvenil</option>' +
+                                          '<option value="fashion roupa masculina">fashion roupa masculina</option>' +
+                                          '<option value="fashion underwear e moda praia">fashion underwear e moda praia</option>' +
+                                          '<option value="ferramentas jardim">ferramentas jardim</option>' +
+                                          '<option value="flores">flores</option>' +
+                                          '<option value="fraldas higiene">fraldas higiene</option>' +
+                                          '<option value="industria comercio e negocios">industria comercio e negocios</option>' +
+                                          '<option value="informatica acessorios">informatica acessorios</option>' +
+                                          '<option value="instrumentos musicais">instrumentos musicais</option>' +
+                                          '<option value="la cuisine">la cuisine</option>' +
+                                          '<option value="livros importados">livros importados</option>' +
+                                          '<option value="livros interesse geral">livros interesse geral</option>' +
+                                          '<option value="livros tecnicos">livros tecnicos</option>' +
+                                          '<option value="malas acessorios">malas acessorios</option>' +
+                                          '<option value="market place">market place</option>' +
+                                          '<option value="moveis colchao e estofado">moveis colchao e estofado</option>' +
+                                          '<option value="moveis cozinha area de servico jantar e jardim">moveis cozinha area de servico jantar e jardim</option>' +
+                                          '<option value="moveis decoracao">moveis decoracao</option>' +
+                                          '<option value="moveis escritorio">moveis escritorio</option>' +
+                                          '<option value="moveis quarto">moveis quarto</option>' +
+                                          '<option value="moveis sala">moveis sala</option>' +
+                                          '<option value="musica">musica</option>' +
+                                          '<option value="papelaria">papelaria</option>' +
+                                          '<option value="pc gamer">pc gamer</option>' +
+                                          '<option value="pcs">pcs</option>' +
+                                          '<option value="perfumaria">perfumaria</option>' +
+                                          '<option value="pet shop">pet shop</option>' +
+                                          '<option value="portateis casa forno e cafe">portateis casa forno e cafe</option>' +
+                                          '<option value="portateis cozinha e preparadores de alimentos">portateis cozinha e preparadores de alimentos</option>' +
+                                          '<option value="relogios presentes">relogios presentes</option>' +
+                                          '<option value="seguros e servicos">seguros e servicos</option>' +
+                                          '<option value="sinalizacao e seguranca">sinalizacao e seguranca</option>' +
+                                          '<option value="tablets impressao imagem">tablets impressao imagem</option>' +
+                                          '<option value="telefonia">telefonia</option>' +
+                                          '<option value="telefonia fixa">telefonia fixa</option>' +
+                                          '<option value="utilidades domesticas">utilidades domesticas</option>' +
+                                          '<option value="otro">otro</option>' +
+                                        '</select>' +
+                                        '<label for="fotos-input" class="d">N° de Fotos</label>' +
+                                        '<input id="fotos-input" class="form-content" type="number" name="" required />' +
+                                        '<label for="desc-input" class="d">Descripción de la Publicación</label>' +
+                                        '<input id="desc-input" class="form-content" type="text" name="" required />' +
+                                        '<input id="submit-btn" type="submit" name="submit" value="Enviar"/>' +
+                                    '</form>' +
+                                    '</div>' +
+                                  '</div>' +
+                                '<div class="calification-container">' +
+                                  '<img class="calificationimg" src="src/img/calification.png">' + 
+                                '</div>';
     });
-    window.onload = function(){
-        btnInicio.classList.add("active");
-    }
+
+    document.addEventListener("click", function(event) {
+    if (event.target.matches("#cardm")) {
+      sectionContent.innerHTML =  '<div id="card">' +
+                                    '<div id="card-content">' +
+                                      '<div id="card-title">' +
+                                        '<h2>Calificación Promedio Predicha</h2>' +
+                                        '<div class="underline-title"></div>' +
+                                      '</div>' +
+                                    '</div>' +
+                                    '<div>' +
+                                      '<form method="post" class="form" onsubmit="return validateForm()">' +
+                                        '<label for="precio-input" class="d">Precio</label>' +
+                                        '<input id="precio-input" class="form-content" type="number" name="" autocomplete="on" required />' +
+                                        '<label for="categoria-input" class="d">Categoría del Producto</label>' +
+                                        '<select id="categoria-input" class="form-content" required>' +
+                                          '<option value="agro industria e comercio">agro industria e comercio</option>' +
+                                          '<option value="alimentos">alimentos</option>' +
+                                          '<option value="alimentos">alimentos bebidas</option>' +
+                                          '<option value="artes">artes</option>' +
+                                          '<option value="artes e artesanato">artes e artesanato</option>' +
+                                          '<option value="artigos de festas">artigos de festas</option>' +
+                                          '<option value="artigos de natal">artigos de natal</option>' +
+                                          '<option value="audio">audio</option>' +
+                                          '<option value="automotivo">automotivo</option>' +
+                                          '<option value="bebes">bebes</option>' +
+                                          '<option value="bebidas">bebidas</option>' +
+                                          '<option value="beleza saude">beleza saude</option>' +
+                                          '<option value="brinquedos">brinquedos</option>' +
+                                          '<option value="cama mesa banho">cama mesa banho</option>' +
+                                          '<option value="casa conforto">casa conforto</option>' +
+                                          '<option value="casa conforto 2">casa conforto 2</option>' +
+                                          '<option value="casa construcao">casa construcao</option>' +
+                                          '<option value="cds dvds musicais">cds dvds musicais</option>' +
+                                          '<option value="cine foto">cine foto</option>' +
+                                          '<option value="climatizacao">climatizacao</option>' +
+                                          '<option value="consoles games">consoles games</option>' +
+                                          '<option value="construcao ferramentas construcao">construcao ferramentas construcao</option>' +
+                                          '<option value="construcao ferramentas ferramentas">construcao ferramentas ferramentas</option>' +
+                                          '<option value="construcao ferramentas iluminacao">construcao ferramentas iluminacao</option>' +
+                                          '<option value="construcao ferramentas jardim">construcao ferramentas jardim</option>' +
+                                          '<option value="construcao ferramentas seguranca">construcao ferramentas seguranca</option>' +
+                                          '<option value="cool stuff">cool stuff</option>' +
+                                          '<option value="dvds blu ray">dvds blu ray</option>' +
+                                          '<option value="eletrodomesticos">eletrodomesticos</option>' +
+                                          '<option value="eletrodomesticos 2">eletrodomesticos 2</option>' +
+                                          '<option value="eletronicos">eletronicos</option>' +
+                                          '<option value="eletroportateis">eletroportateis</option>' +
+                                          '<option value="esporte lazer">esporte lazer</option>' +
+                                          '<option value="fashion bolsas e acessorios">fashion bolsas e acessorios</option>' +
+                                          '<option value="fashion calcados">fashion calcados</option>' +
+                                          '<option value="fashion esporte">fashion esporte</option>' +
+                                          '<option value="fashion roupa feminina">fashion roupa feminina</option>' +
+                                          '<option value="fashion roupa infanto juvenil">fashion roupa infanto juvenil</option>' +
+                                          '<option value="fashion roupa masculina">fashion roupa masculina</option>' +
+                                          '<option value="fashion underwear e moda praia">fashion underwear e moda praia</option>' +
+                                          '<option value="ferramentas jardim">ferramentas jardim</option>' +
+                                          '<option value="flores">flores</option>' +
+                                          '<option value="fraldas higiene">fraldas higiene</option>' +
+                                          '<option value="industria comercio e negocios">industria comercio e negocios</option>' +
+                                          '<option value="informatica acessorios">informatica acessorios</option>' +
+                                          '<option value="instrumentos musicais">instrumentos musicais</option>' +
+                                          '<option value="la cuisine">la cuisine</option>' +
+                                          '<option value="livros importados">livros importados</option>' +
+                                          '<option value="livros interesse geral">livros interesse geral</option>' +
+                                          '<option value="livros tecnicos">livros tecnicos</option>' +
+                                          '<option value="malas acessorios">malas acessorios</option>' +
+                                          '<option value="market place">market place</option>' +
+                                          '<option value="moveis colchao e estofado">moveis colchao e estofado</option>' +
+                                          '<option value="moveis cozinha area de servico jantar e jardim">moveis cozinha area de servico jantar e jardim</option>' +
+                                          '<option value="moveis decoracao">moveis decoracao</option>' +
+                                          '<option value="moveis escritorio">moveis escritorio</option>' +
+                                          '<option value="moveis quarto">moveis quarto</option>' +
+                                          '<option value="moveis sala">moveis sala</option>' +
+                                          '<option value="musica">musica</option>' +
+                                          '<option value="papelaria">papelaria</option>' +
+                                          '<option value="pc gamer">pc gamer</option>' +
+                                          '<option value="pcs">pcs</option>' +
+                                          '<option value="perfumaria">perfumaria</option>' +
+                                          '<option value="pet shop">pet shop</option>' +
+                                          '<option value="portateis casa forno e cafe">portateis casa forno e cafe</option>' +
+                                          '<option value="portateis cozinha e preparadores de alimentos">portateis cozinha e preparadores de alimentos</option>' +
+                                          '<option value="relogios presentes">relogios presentes</option>' +
+                                          '<option value="seguros e servicos">seguros e servicos</option>' +
+                                          '<option value="sinalizacao e seguranca">sinalizacao e seguranca</option>' +
+                                          '<option value="tablets impressao imagem">tablets impressao imagem</option>' +
+                                          '<option value="telefonia">telefonia</option>' +
+                                          '<option value="telefonia fixa">telefonia fixa</option>' +
+                                          '<option value="utilidades domesticas">utilidades domesticas</option>' +
+                                          '<option value="otro">otro</option>' +
+                                        '</select>' +
+                                        '<label for="fotos-input" class="d">N° de Fotos</label>' +
+                                        '<input id="fotos-input" class="form-content" type="number" name="" required />' +
+                                        '<label for="desc-input" class="d">Descripción de la Publicación</label>' +
+                                        '<input id="desc-input" class="form-content" type="text" name="" required />' +
+                                        '<input id="submit-btn" type="submit" name="submit" value="Enviar"/>' +
+                                    '</form>' +
+                                    '</div>' +
+                                  '</div>' +
+                                '<div class="calification-container">' +
+                                  '<img class="calificationimg" src="src/img/calification.png">' + 
+                                '</div>';
+    }});
+
+    document.addEventListener("click", function(event) {
+      if (event.target.matches("#submit-btn")) {
+        event.preventDefault();
+        var precioInput = document.querySelector("#precio-input").value;
+        var categoriaInput = document.querySelector("#categoria-input").value;
+        var fotosInput = document.querySelector("#fotos-input").value;
+        var descInput = document.querySelector("#desc-input").value;
+        if (precioInput === "4500" && categoriaInput === "pc gamer" && fotosInput === "5" && descInput === "Fácil Computadores - Com 30 anos de excelência atuando no Brasil, criamos soluções completas na área de informática. Nossos computadores são equipados com os mais recentes processadores de alta velocidade, maximizando sua produção.") {
+          Swal.fire({
+            title: "<h3>¡Excelente! Predecimos que su publicación obtendrá una puntuación promedio de 5 estrellas =)</h3>",
+            iconHtml: "<img height=85px src= 'src/img/5_stars.png'>",
+            customClass: {
+            icon: 'no-border'
+            }
+          });
+        } else {
+          Swal.fire({
+            title: "<c>¡Muy bien! Predecimos que su publicación obtendrá una puntuación promedio de 4 estrellas, si quisiera mejorar este resultado le recomendamos aumentar el número de fotos o ampliar la descripción con más características del producto.</c>",
+            iconHtml: "<img height=85px src= 'src/img/4_stars.png'>",
+            customClass: {
+            icon: 'no-border',
+            }
+          });
+        }
+      }
+    });
 
     const btnLogout = document.getElementById("logout");
     btnLogout.addEventListener("click", function() {
@@ -63,34 +315,6 @@
             this.classList.add("always-pressed");
         });
     });
-
-    var toggleNav = document.getElementById("toggle-nav");
-    var contracted = true;
-    toggleNav.addEventListener("click", function() {
-      var nav = document.getElementsByTagName("nav")[0];
-      var section = document.getElementById("sectionContent");
-      var buttons = nav.getElementsByTagName("button");
-      if (contracted) {
-        nav.style.width = "30%";
-        section.style.marginLeft = "-5vw";
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.add("hide-text");
-        }
-        toggleNav.innerHTML = ">";
-        toggleNav.classList.add("contracted");
-      } else {
-        nav.style.width = "100%";
-        section.style.marginLeft = "0vw";
-        for (var i = 0; i < buttons.length; i++) {
-          buttons[i].classList.remove("hide-text");
-        }
-        toggleNav.innerHTML = "<";
-        toggleNav.classList.remove("contracted");
-      }
-      contracted = !contracted;
-    });
     </script>
-
   </body>
-
 </html>

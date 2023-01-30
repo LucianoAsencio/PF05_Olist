@@ -8,7 +8,7 @@ olist {
 }
 body, html {
 	height: 100%;
-  background: linear-gradient(113deg, #0124d5 60% ,#FFF 50%);
+  background: linear-gradient(113deg, #0f1f87 60% ,#FFF 50%);
 	position: relative;
   margin: 0px;
 }
@@ -36,7 +36,7 @@ label {
   user-select: none;
 }
 #forgot-pass {
-  color: #0124d5;
+  color: #0f1f87;
   font-family: 'Poppins', sans-serif;
   font-size: 10pt;
   margin-top: 16px;
@@ -59,14 +59,14 @@ label {
 #card-title {
   font-family: 'Poppins', sans-serif;
   font-size: larger;
-  color: #0124d5;
+  color: #0f1f87;
   padding-bottom: 3px;
   padding-top: 23px;
   text-align: center;
   user-select: none;
 }
 #signup {
-  color: #0124d5;
+  color: #0f1f87;
   font-family: 'Poppins', sans-serif;
   font-size: 10pt;
   margin-top: 16px;
@@ -74,7 +74,7 @@ label {
   user-select: none;
 }
 #submit-btn {
-  background: -webkit-linear-gradient(left, #0124d5, #476aff);
+  background: -webkit-linear-gradient(left, #0f1f87, #476aff);
   border: none;
   border-radius: 21px;
   cursor: pointer;
@@ -96,12 +96,12 @@ label {
   flex-direction: column;
 }
 .form-border {
-  background: -webkit-linear-gradient(left, #0124d5, #fff);
+  background: -webkit-linear-gradient(left, #0f1f87, #fff);
   height: 1px;
   width: 100%;
 }
 .form-border-label {
-  background: -webkit-linear-gradient(left, #0124d5, #fff);
+  background: -webkit-linear-gradient(left, #0f1f87, #fff);
   height: 1px;
   width: 100%;
   color: gray;
@@ -116,7 +116,7 @@ label {
   padding-top: 14px;
 }
 .underline-title {
-  background: -webkit-linear-gradient(left, #0124d5, #fff);
+  background: -webkit-linear-gradient(left,#FFF, #0f1f87, #fff);
   height: 3px;
   margin: -1.1rem auto 0 auto;
   width: 80%;
@@ -148,14 +148,14 @@ label {
   width: 329px;
 }
 #login {
-  color: #0124d5;
+  color: #0f1f87;
   font-family: 'Poppins', sans-serif;
   font-size: 10pt;
   margin-top: 16px;
   text-align: center;
 }
 #signup-btn {
-  background: -webkit-linear-gradient(left, #0124d5, #476aff);
+  background: -webkit-linear-gradient(left, #0f1f87, #0124D5);
   border: none;
   border-radius: 21px;
   cursor: pointer;
