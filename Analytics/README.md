@@ -26,10 +26,13 @@ Este documento describe los KPI clave que se utilizaron en el panel para ayudar 
 
 #### EDA:  
 El Análisis Exploratorio de Datos se utiliza para explorar y comprender los datos a través de visualizaciones.  
+
++ [EDA.](analytics/eda_olist_da.ipynb)  
+
 #### Informe:  
 El informe de análisis se utiliza para presentar los resultados y hallazgos del EDA de manera clara y concisa, con el objetivo de comunicar y documentar los resultados para futuras referencias y decisiones de negocios.    
 
-+ [EDA.](analytics/eda_olist_da.ipynb)   
+  
 + [Informe.](analytics/informe_analytic.md)   
 
 <hr>  
