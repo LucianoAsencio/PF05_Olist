@@ -30,7 +30,7 @@ El Análisis Exploratorio de Datos se utiliza para explorar y comprender los dat
 + [EDA.](https://github.com/LucianoAsencio/PF05_Olist/blob/analytics/Analytics/EDA_Olist_DA.ipynb)  
 
 #### Informe:  
-El informe de análisis se utiliza para presentar los resultados y hallazgos del EDA de manera clara y concisa, con el objetivo de comunicar y documentar los resultados para futuras referencias y decisiones de negocios.    
+El informe de análisis se utiliza para presentar los resultados y hallazgos del EDA de manera clara y concisa, con el objetivo de comunicar y documentar los resultados para futuras referencias. 
 
   
 + [Informe.](https://github.com/LucianoAsencio/PF05_Olist/blob/analytics/Analytics/Informe%20analytic.md)   
