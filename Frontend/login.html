@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="static/styles.css">
+  </head>
+
+  <body>
+      <div class="container">
+          <div class="section1">
+              <olist>Olist</olist>
+          </div>
+          <div class="section2">
+              <div id="card">
+                  <div class="card-img-container">
+                      <img src="src/img/AllemBI.png" alt="AllemBI" class="card-img"> 
+                  </div>
+                  <div id="card-content">
+                      <div id="card-title">
+                      <h2>Inicia Sesión</h2>
+                      <div class="underline-title"></div>
+                      </div>
+                      <form method="post" class="form" onsubmit="return validateForm()">
+                          <label for="user-email" style="padding-top:13px">&nbsp;</label>
+                          <input id="user-email" class="form-content" type="text" name="email" autocomplete="on" placeholder="ID de usuario" required />
+                          <div class="form-border"></div>
+                          <label for="user-password" style="padding-top:22px">&nbsp;</label>
+                          <input id="user-password" class="form-content" type="password" name="password" placeholder="*********" required />
+                          <div class="form-border"></div>
+                          <input id="submit-btn" type="submit" name="submit" value="Iniciar Sesión"/>
+                          <a href="https://mx-app.olist.com/setup/pre-signup?_gl=1*nas9ck*_gcl_aw*R0NMLjE2NzMyOTI5ODkuQ2p3S0NBaUFrLS1kQmhBQkVpd0FjaEl3a2JxWTlodHNyYWV0LXFjRW9EYWpXWDNmMDhMWm9vdEx2VVA4aW8yaW9zblNQYmx6RmdWVk54b0NDcDRRQXZEX0J3RQ..&_ga=2.258514060.785474906.1673988864-724497749.1673292505&_gac=1.86760170.1673292989.CjwKCAiAk--dBhABEiwAchIwkbqY9htsraet-qcEoDajWX3f08LZootLvUP8io2iosnSPblzFgVVNxoCCp4QAvD_BwE" id="signup">¿Aún no tienes una cuenta?</a>
+                      </form>
+                  </div>
+              </div>
+          </div>
+      </div>
+  <div id="particles-js"></div>
+
+  <script>
+
+  function validateForm() {
+  event.preventDefault();
+  var email = document.getElementById("user-email").value;
+  var password = document.getElementById("user-password").value;
+      
+  if (email == "fernandoashur@olist.com" && password == "1234") {
+      location.replace("principal_olist.html");
+      return true;
+  } 
+  else if (email == "4869f7a5dfa277a7dca6462dcf3b52b2" && password == "1234") {
+      location.replace("principal_user.html");
+      return true;
+  }
+  else {
+      alert("La cuenta no existe o las credenciales son incorrectas.");
+      return false;
+  }
+  }
+
+  </script>
+
+  <script src="particles.min.js"></script>
+
+  <script>
+
+  particlesJS(
+              {
+    "particles": {
+      "number": {
+        "value": 150,
+        "density": {
+          "enable": true,
+          "value_area": 800
+        }
+      },
+      "color": {
+        "value": "#ffffff"
+      },
+      "shape": {
+        "type": "circle",
+        "stroke": {
+          "width": 0,
+          "color": "#000000"
+        },
+        "polygon": {
+          "nb_sides": 5
+        },
+        "image": {
+          "src": "img/github.svg",
+          "width": 100,
+          "height": 100
+        }
+      },
+      "opacity": {
+        "value": 1,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 1,
+          "opacity_min": 0.1,
+          "sync": false
+        }
+      },
+      "size": {
+        "value": 8,
+        "random": true,
+        "anim": {
+          "enable": false,
+          "speed": 40,
+          "size_min": 0.1,
+          "sync": false
+        }
+      },
+      "line_linked": {
+        "enable": true,
+        "distance": 150,
+        "color": "#ffffff",
+        "opacity": 0.3787908679834909,
+        "width": 0
+      },
+      "move": {
+        "enable": true,
+        "speed": 6,
+        "direction": "none",
+        "random": false,
+        "straight": false,
+        "out_mode": "out",
+        "bounce": false,
+        "attract": {
+          "enable": false,
+          "rotateX": 600,
+          "rotateY": 1200
+        }
+      }
+    },
+    "interactivity": {
+      "detect_on": "canvas",
+      "events": {
+        "onhover": {
+          "enable": true,
+          "mode": "grab"
+        },
+        "onclick": {
+          "enable": true,
+          "mode": "push"
+        },
+        "resize": true
+      },
+      "modes": {
+        "grab": {
+          "distance": 191.80819180819182,
+          "line_linked": {
+            "opacity": 1
+          }
+        },
+        "bubble": {
+          "distance": 400,
+          "size": 40,
+          "duration": 2,
+          "opacity": 8,
+          "speed": 3
+        },
+        "repulse": {
+          "distance": 200,
+          "duration": 0.4
+        },
+        "push": {
+          "particles_nb": 4
+        },
+        "remove": {
+          "particles_nb": 2
+        }
+      }
+    },
+    "retina_detect": true
+  }
+  )
+  
+  </script>
+
+  </body>
+
+</html>
