@@ -37,6 +37,12 @@ El informe de análisis se utiliza para presentar los resultados y hallazgos del
 
 <hr>  
 
+## FODA  
+
+Para ver mucho mas en detalle nuestro analisis y recomendaciones hicimos un FODA    
+
+[FODA](https://github.com/LucianoAsencio/PF05_Olist/blob/analytics/Analytics/An%C3%A1lisis%20FODA.md)
+
 ## Dashboards   
 
 ##### Se realizaron 2 dashboards:   
