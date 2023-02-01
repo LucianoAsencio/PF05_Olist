@@ -71,7 +71,11 @@ Para los vendedores, tenemos un dashboard que habla de información más especí
 
 En las correspondientes carpetas están los respectivos informes de cada área particular.
 
+
 [Informe Data Engineering](https://github.com/LucianoAsencio/PF05_Olist/blob/main/Engineering/README.md)
+
 [Informe Data Analytics](https://github.com/LucianoAsencio/PF05_Olist/blob/main/Analytics/README.md)
+
 [Informe Machine Learning](https://github.com/LucianoAsencio/PF05_Olist/blob/main/Machine%20Learning/README.md)
+
 [EDA](https://www.notion.so/Informe-EDA-f54fea04c3e3469ca89d12b815ab0ad6)
