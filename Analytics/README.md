@@ -17,7 +17,7 @@ En esta sección del repositorio de Git, encontrarás información relacionada c
 #### Diccionario:  
 Aquí encontrarás el contenido y la explicación de las tablas y columnas utilizadas en el proyecto.   
 
-+ [Diccionario.](https://github.com/LucianoAsencio/PF05_Olist/blob/analytics/Analytics/Diccionario.md)  
++ [Diccionario.](https://github.com/LucianoAsencio/PF05_Olist/blob/main/Analytics/Diccionario.md)  
 
 #### Diccionario de KPI's:  
 Este documento describe los KPI clave que se utilizaron en el panel para ayudar a los analistas a tomar las mejores decisiones.   
